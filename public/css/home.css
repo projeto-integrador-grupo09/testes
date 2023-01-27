@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family= Montserrat: família= Montserrat:ital,wght@0,100;0,800;1,400 &família= Roboto:wght@100;700 & display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+html {
+    height: 100%;
+}
+
+main {
+    font-family: 'Roboto', sans-serif;
+}
+
+main section {
+    background-color: rgb(64, 68, 68);
+    height: 500px;
+    padding: 100px;
+}
+
+main p {
+    font-size: 70px;
+    text-align: justify;
+    font-weight: lighter;
+    color: white;
+    padding: 100px;
+
+}
+main p.text {
+    font-size: 30px;
+    text-align:justify;
+    color: white;
+    padding-top: 0;
+}
+
+main div.block-container {
+    background-color: white;
+    position: relative;
+}
+
+main #banner {
+    object-fit: cover;  
+    display: block;
+    height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 100px;
+}
+
+div > #banner-text {
+    position: relative;
+    font-weight: lighter;
+    font-size: 100px;
+    color: aliceblue;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0px;
+}
+
+
+.container-promo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.pagamentos {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-align: none;
+    font-weight: lighter;
+    padding-top: 5px;
+}
+
+.frete {
+    object-fit: cover;
+    width: 150px;
+}
+
+.img-pagamentos {
+    object-fit: cover;
+    width: 100px;
+    padding: 0px;
+}
