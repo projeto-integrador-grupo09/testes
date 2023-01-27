@@ -135,7 +135,8 @@ header .link-header:hover {
 footer.geral {
     background-color:rgb(224, 232, 232);
     height: 500px;
-    padding: 100px;
+    padding-top: 100px;
+    width: 100%;
 }
 
 div.container-main-footer {
