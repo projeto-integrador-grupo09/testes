@@ -69,3 +69,9 @@ body::before{
     background-size: cover;
     z-index: -1;
 }
+footer.geral {
+    background-color:rgb(224, 232, 232);
+    height: 500px;
+    padding-top: 100px;
+    width: 100%;
+}

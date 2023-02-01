@@ -1,98 +1,121 @@
 <!DOCTYpE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/geral.css">
     <link rel="stylesheet" href="/css/home.css">
+    <script src="/js/home.js" defer></script>
     <title>DH Sports</title>
 </head>
+
 <body>
-<header>
+    <header>
         <a href="/">
-            <img src="\img\logo-pi.jpeg" alt="Logo Hexa Sports" class="logo" >
-         </a>
-         <section>
-             <input type="text" name="" id="texto-buscar" placeholder="Procurar">
-             <a href="/">
-             <img src="\img\lupa_buscar.jpg" alt="Buscar" class="lupa">
-             </a>
+            <img src="\img\logo-pi.jpeg" alt="Logo Hexa Sports" class="logo">
+        </a>
+        <section>
+            <input type="text" name="" id="texto-buscar" placeholder="Procurar">
+            <a href="/">
+                <img src="\img\lupa_buscar.jpg" alt="Buscar" class="lupa">
+            </a>
         </section>
-         <nav>
+        <nav>
             <ul>
                 <li><a href="./" class="link-header">HOME</a></li>
                 <li><a href="./produtos" class="link-header">PRODUTOS</a></li>
                 <li><a href="./sac" class="link-header">FALE CONOSCO</a></li>
                 <li><a href="./login">
-                    <img src="/img/login.png" alt="login" class="login">
-                </a>
+                        <img src="/img/login.png" alt="login" class="login">
+                    </a>
                 </li>
                 <li><a href="./carrinho">
-                    <img src="/img/bag.png" alt="carrinho" class="carrinho">
-                </a>
+                        <img src="/img/bag.png" alt="carrinho" class="carrinho">
+                    </a>
                 </li>
             </ul>
-         </nav>
-</header>
+        </nav>
+    </header>
     <main>
-    <section>
-    <p>produtos com até 60% off</p>
-    <p class="text">Fim de temporada especial,<br> Você ainda garante mais 20% extra comprando 2 artigos ou <br> 30% extra comprando três ou mais.</p>
-    </section>
-    <div class="block-container">
-        <img id="banner" src="/img/capa.webp" alt="Capa">
-        <p id="banner-text">Venha torcer com estilo!</p>   
-   </div>
-   <div class="container-promo">
-    <article class="icones">
-        <img class="img-pagamentos" src="/img/cartao.png" alt="cartao">
-        <p class="pagamentos">Pagamento em até 10x sem juros</p>
-    </article>
-    <article>
-        <img class="img-pagamentos" src="/img/boleto.png" alt="boleto">
-        <p class="pagamentos">Pagamento por boleto</p>
-    </article>
-    <article>
-        <img class="img-pagamentos" src="/img/pix.jpg" alt="pix">
-        <p class="pagamentos">Pagamento via pix</p>
-    </article>
-    <article>
-        <img class="frete" src="/img/frete.jpg" alt="frete">
-        <p class="pagamentos"> Frete grátis para todo Brasil</p>
-    </article>
-</div> 
-</main>
-<footer>
-    <footer class="geral">
-        <div class="container-main-footer">
-            <div class="container-footer">
-                <p class="p-footer">Cadastre-se para receber nossa newsletter</p>
-                <input type="text" name="news" class="input-footer">
-                <button class="bt-footer">Cadastrar</button>
+        <section>
+            <p>produtos com até 60% off</p>
+            <p class="text">Fim de temporada especial,<br> Você ainda garante mais 20% extra comprando 2 artigos ou <br>
+                30% extra comprando três ou mais.</p>
+            <h1>Seleções mais buscadas</h1>
+            <div class="container">
+                <button class="arrow-left control" aria-label="Previous image">:seta_para_trás:</button>
+                <button class="arrow-right control" aria-label="Next Image">:seta_para_frente:</button>
+                <div class="gallery-wrapper">
+                    <div class="gallery">
+                        <div class="item current-item cyan"></div>
+                        <div class="item deeppink"></div>
+                        <div class="item turquoise"></div>
+                        <div class="item darkblue"></div>
+                        <div class="item purple"></div>
+                        <img src="/img/argcarro.jpg" alt="" class="item current-item">
+                        <img src="/img/bracarro.png" alt="" class="item current-item">
+                        <img src="/img/francacarro.png" alt="" class="item current-item">
+                        <img src="/img/ingcarro.png" alt="" class="item current-item">
+                    </div>
+                </div>
             </div>
-            <div>
-                <p class="titulo">Categorias</p>
-                <p class="itens">Masculino</p>
-                <p  class="itens">Feminino</p>
-                <p  class="itens">Infantil</p>
-                <p  class="itens">Esportes</p>
-                <p  class="itens">Acessórios</p>
-            </div>
-            <div>
-                <p class="titulo">Ajuda</p>
-                <p  class="itens">Central de ajuda</p>
-                <p  class="itens">Status da compra</p>
-                <p  class="itens">Devoluções e garantias</p>
-                <p  class="itens">Nosso contato</p>
-            </div>
-            <div>
-                <p class="titulo">Sobre nós</p>
-                <p  class="itens">Trabalhe conosco</p>
-                <p  class="itens">Tecnologia e inovação</p>
-                <p  class="itens">Conheça nossa hitória</p>
-            </div>
+        </section>
+        <div class="block-container">
+            <img id="banner" src="/img/capa.webp" alt="Capa">
+            <p id="banner-text">Venha torcer com estilo!</p>
         </div>
-    </footer>
+        <div class="container-promo">
+            <article class="icones">
+                <img class="img-pagamentos" src="/img/cartao.png" alt="cartao">
+                <p class="pagamentos">Pagamento em até 10x sem juros</p>
+            </article>
+            <article>
+                <img class="img-pagamentos" src="/img/boleto.png" alt="boleto">
+                <p class="pagamentos">Pagamento por boleto</p>
+            </article>
+            <article>
+                <img class="img-pagamentos" src="/img/pix.jpg" alt="pix">
+                <p class="pagamentos">Pagamento via pix</p>
+            </article>
+            <article>
+                <img class="frete" src="/img/frete.jpg" alt="frete">
+                <p class="pagamentos"> Frete grátis para todo Brasil</p>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <footer class="geral">
+            <div class="container-main-footer">
+                <div class="container-footer">
+                    <p class="p-footer">Cadastre-se para receber nossa newsletter</p>
+                    <input type="text" name="news" class="input-footer">
+                    <button class="bt-footer">Cadastrar</button>
+                </div>
+                <div>
+                    <p class="titulo">Categorias</p>
+                    <p class="itens">Masculino</p>
+                    <p class="itens">Feminino</p>
+                    <p class="itens">Infantil</p>
+                    <p class="itens">Esportes</p>
+                    <p class="itens">Acessórios</p>
+                </div>
+                <div>
+                    <p class="titulo">Ajuda</p>
+                    <p class="itens">Central de ajuda</p>
+                    <p class="itens">Status da compra</p>
+                    <p class="itens">Devoluções e garantias</p>
+                    <p class="itens">Nosso contato</p>
+                </div>
+                <div>
+                    <p class="titulo">Sobre nós</p>
+                    <p class="itens">Trabalhe conosco</p>
+                    <p class="itens">Tecnologia e inovação</p>
+                    <p class="itens">Conheça nossa hitória</p>
+                </div>
+            </div>
+        </footer>
 </body>
+
 </html>
