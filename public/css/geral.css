@@ -10,8 +10,9 @@ html {
     height: 100%;
 }
 
-body{
-    font-family:'roboto', sans-serif;
+body {
+    background-color: rgba(224, 232, 232);
+    font-family:'Roboto', sans-serif;
 }
 
 header {
@@ -19,23 +20,25 @@ header {
     padding: 10px 50px;
     display: flex;
     align-items: center;
-    justify-content:space-around;
+    justify-content:space-between;
     position: fixed;
     width: 100%;
     z-index: 1;
     top: 0;
 }
-    
+
+/*Posição da lupa*/
 header section {
     position: relative;
 }
 
+/*Procurar*/
 header section input {
     position: relative;
     font-size: 1.5rem;
     font-weight: lighter;
     border-radius: 15px;
-    border: black solid 1px;
+    border: none;
     padding: 10px;
     width: 300px;
     height: 25px;
@@ -72,10 +75,12 @@ button{
 
 }
 
+/*Alinhar HOME/PRODUTOS/FALE CONOSCO/ICONES*/
 header >nav >ul{
     list-style: none;
     display: flex;
-    align-items: baseline;
+    align-items: center;
+    
 }
 
 header .link-header{
@@ -112,12 +117,13 @@ header .link-header:hover {
 .texto-buscar {
     display: flex;
     justify-content:center;
+    border: none;
 }
 
 .texto-buscar input{
     font-size: 1rem;
     font-weight: bold;
-    border-style: black;
+    border-style: none;
     padding: 20px;
     margin-right: 10px;
     width: 300px;
@@ -127,7 +133,7 @@ header .link-header:hover {
 .texto-buscar .btbuscar{
     font-size: 1rem;
     font-weight: lighter;
-    border-style: black;
+    border-style: none;
     padding: 10px;
     background-color: green;
     padding: 10px;
