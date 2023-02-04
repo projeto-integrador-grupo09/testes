@@ -92,6 +92,7 @@ h1 {
     text-align: center;
     margin: 1em 0;
     font-family: sans-serif;
+    padding-top: 100px;
   }
   
   .container-carrossel {
@@ -99,6 +100,7 @@ h1 {
     padding: 15px;
     max-width: 640px;
     margin: 0 auto;
+    padding-top: 150px;
   }
   
   .gallery-wrapper {
