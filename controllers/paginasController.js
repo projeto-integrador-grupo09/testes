@@ -12,7 +12,7 @@ const paginasController = {
     },
 
     showCarrinho: (req, res)=>{
-        return res.sendFile(path.resolve ('views/carrinho.html'))
+        return res.render('carrinho.ejs');
     },
 
     showLogin: (req, res)=>{
