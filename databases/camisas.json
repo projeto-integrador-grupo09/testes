@@ -1,0 +1,88 @@
+[
+    {
+        "id": 1,
+        "nome": "Espanha",
+        "Cores": [
+            "Vermelha",
+            "Amarela"
+        ],
+        "preco": 350,
+        "img": "/img/espanha.jpg",
+        "destaque": true,
+        "score":1
+    },
+    {
+        "id": 2,
+        "nome": "Argentina",
+        "Cores": [
+            "Azul",
+            "Branca"
+        ],
+        "preco": 350,
+        "img": "/img/argentina.webp",
+        "destaque": true,
+        "score":1
+    },
+    {
+        "id": 3,
+        "nome": "Alemanha",
+        "Cores": [
+            "Preto",
+            "Branca"
+        ],
+        "preco": 350,
+        "img": "/img/alemanha copy.webp",
+        "destaque": true,
+        "score":1
+    },
+    {
+        "id": 4,
+        "nome": "Brasil",
+        "Cores": [
+            "Amarelo",
+            "Verde"
+        ],
+        "preco": 350,
+        "img": "/img/brasil copy.jpg",
+        "destaque": true,
+        "score":30
+    },
+    {
+        "id": 5,
+        "nome": "Inglaterra",
+        "Cores": [
+            "branco",
+            "Azul"
+        ],
+        "preco": 350,
+        "img": "/img/Inglaterra copy.jpg",
+        "destaque": true,
+        "score":30
+    },
+    {
+        "id": 6,
+        "nome": "Uruguai",
+        "Cores": [
+            "branco",
+            "Azul"
+        ],
+        "preco": 350,
+        "img": "/img/uruguai copy.webp",
+        "destaque": true,
+        "score":1
+    },
+    {
+        "id": 7,
+        "nome": "Japao",
+        "Cores": [
+            "branco",
+            "Azul"
+        ],
+        "preco": 350,
+        "img": "/img/japao copy.jpg",
+        "destaque": true,
+        "score":1
+    }
+    
+    
+]
