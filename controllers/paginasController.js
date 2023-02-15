@@ -2,7 +2,8 @@ const path = require('path');
 const paginasController = {
 
     showhome: (req, res)=>{
-        return res.sendFile(path.resolve('views/home.html'))
+        //return res.sendFile(path.resolve('views/home.html'))
+        return res.render('home.ejs');
     },
 
     showProdutos: (req, res)=>{
