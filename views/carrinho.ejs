@@ -3,14 +3,14 @@
   <%- include('parts/head.ejs') %>
 
 <body>
+  <link rel="stylesheet" href="/css/carrinho">
   <%- include('parts/header.ejs') %>
-    <main>
-      <p>Seu carrinho</p>
-      <p>Continue comprando!</p>
-      <img src="/img/argentina.webp" alt="Camisa Argentina">
-      <p>Camisa seleção Argentina</p>
-      <p>Tamanho: M</p>
-    </main>
+    <h2>Carrinho de <%= nomeDoUsuario%></h2>
+    <ul>
+      <% for (const camisa  of carrinho) { %>
+        <li><%= camisa.nome  %></li>
+        <% } %>     
+      </ul>
     <footer>
       <footer class="geral">
         <div class="container-main-footer">

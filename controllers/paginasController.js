@@ -12,7 +12,23 @@ const paginasController = {
     },
 
     showCarrinho: (req, res)=>{
-        return res.render('carrinho.ejs');
+        let carrinho = [
+            {
+                "id": 1,
+                "nome": "Espanha",
+                "Cores": [
+                    "Vermelha",
+                    "Amarela"
+                ],
+                "preco": 350,
+                "img": "/img/espanha.jpg",
+                "destaque": true,
+                "score":1
+            }
+        ]
+        let nomeDoUsuario = 'neymar'
+        
+        return res.render('carrinho.ejs',{carrinho,nomeDoUsuario});
     },
 
     showLogin: (req, res)=>{
