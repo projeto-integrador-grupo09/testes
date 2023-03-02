@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family= Montserrat: família= Montserrat:ital,wght@0,100;0,800;1,400 &família= Roboto:wght@100;700 & display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
 body {
     margin: 0;
 }

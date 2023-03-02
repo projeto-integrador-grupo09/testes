@@ -8,7 +8,7 @@ const paginasController = {
     },
 
     showProdutos: (req, res)=>{
-        return res.render("produtos.ejs",{produtos})
+        return res.render('produtos.ejs',{produtos})
     },
 
     showCarrinho: (req, res)=>{
@@ -32,11 +32,11 @@ const paginasController = {
     },
 
     showLogin: (req, res)=>{
-        return res.sendFile(path.resolve('views/login.html'))
+        return res.render('login.ejs');
     },
 
     showSac: (req, res)=>{
-        return res.sendFile(path.resolve('views/sac.html'))
+        return res.render('sac.ejs');
     },
   
 };

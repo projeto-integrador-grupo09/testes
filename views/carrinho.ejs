@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <%- include('parts/head.ejs') %>
 
   <body>
     <link rel="stylesheet" href="/css/carrinho.css">
     <%- include('parts/header.ejs') %>
-      <h2>Carrinho de <%= nomeDoUsuario %></h2>
+      <h2>Carrinho de <%= nomeDoUsuario %>
+      </h2>
       <ul>
         <% for (const camisa of carrinho) { %>
           <li>
@@ -13,38 +15,6 @@
           </li>
           <% } %>
       </ul>
-      <footer>
-        <footer class="geral">
-          <div class="container-main-footer">
-            <div class="container-footer">
-              <p class="p-footer">Cadastre-se para receber nossa newsletter</p>
-              <input type="text" name="news" class="input-footer">
-              <button class="bt-footer">Cadastrar</button>
-            </div>
-            <div>
-              <p class="titulo">Categorias</p>
-              <p class="itens">Homens</p>
-              <p class="itens">Mulheres</p>
-              <p class="itens">Infantil</p>
-              <p class="itens">Esportes</p>
-              <p class="itens">Acessórios</p>
-            </div>
-            <div>
-              <p class="titulo">Ajuda</p>
-              <p class="itens">Centro de ajuda</p>
-              <p class="itens">Status da compra</p>
-              <p class="itens">Devoluções e garantias</p>
-              <p class="itens">nosso Contato</p>
-            </div>
-            <div>
-              <p class="titulo">Sobre nós</p>
-              <p class="itens">Sobre Nós</p>
-              <p class="itens">Trabalhe conosco</p>
-              <p class="itens">Tecnologia e inovação</p>
-              <p class="itens">Conhea nossa hitória</p>
-            </div>
-          </div>
-        </footer>
+      <%- include('parts/footer.ejs') %>
   </body>
-
 </html>

@@ -2,86 +2,55 @@
 <html lang="pt-BR">
 
 <%- include('parts/head.ejs') %>
- 
 
-<body>
-    <link rel="stylesheet" href="/css/home.css">
-    <%- include('parts/header.ejs') %>
-    <main>
-        <section>
-            <h1>Seleções mais buscadas</h1>
-            <div class="container-carrossel">
-                <button class="arrow-left control" aria-label="Previous image">◀</button>
-                <button class="arrow-right control" aria-label="Next Image">▶</button>
-                <div class="gallery-wrapper">
-                    <div class="gallery">
-                        <!--<div class="item current-item cyan"></div>
+    <body>
+        <link rel="stylesheet" href="/css/home.css">
+        <%- include('parts/header.ejs') %>
+            <main>
+                <section>
+                    <h1>Seleções mais buscadas</h1>
+                    <div class="container-carrossel">
+                        <button class="arrow-left control" aria-label="Previous image">◀</button>
+                        <button class="arrow-right control" aria-label="Next Image">▶</button>
+                        <div class="gallery-wrapper">
+                            <div class="gallery">
+                                <!--<div class="item current-item cyan"></div>
                         <div class="item deeppink"></div>
                         <div class="item turquoise"></div>
                         <div class="item darkblue"></div>
                         <div class="item purple"></div>-->
-                        <img src="/img/argcarro.jpg" alt="" class="item current-item">
-                        <img src="/img/bracarro.png" alt="" class="item current-item">
-                        <img src="/img/francacarro.png" alt="" class="item current-item">
-                        <img src="/img/ingcarro.png" alt="" class="item current-item">
+                                <img src="/img/argcarro.jpg" alt="" class="item current-item">
+                                <img src="/img/bracarro.png" alt="" class="item current-item">
+                                <img src="/img/francacarro.png" alt="" class="item current-item">
+                                <img src="/img/ingcarro.png" alt="" class="item current-item">
+                            </div>
+                        </div>
                     </div>
+                </section>
+                <div class="block-container">
+                    <img id="banner" src="/img/capa.webp" alt="Capa">
+                    <p id="banner-text">Venha torcer com estilo!</p>
                 </div>
-            </div>
-        </section>
-        <div class="block-container">
-            <img id="banner" src="/img/capa.webp" alt="Capa">
-            <p id="banner-text">Venha torcer com estilo!</p>
-        </div>
-        <div class="container-promo">
-            <article class="icones">
-                <img class="img-pagamentos" src="/img/cartao.png" alt="cartao">
-                <p class="pagamentos">Pagamento em até 10x sem juros</p>
-            </article>
-            <article>
-                <img class="img-pagamentos" src="/img/boleto.png" alt="boleto">
-                <p class="pagamentos">Pagamento por boleto</p>
-            </article>
-            <article>
-                <img class="img-pagamentos" src="/img/pix.jpg" alt="pix">
-                <p class="pagamentos">Pagamento via pix</p>
-            </article>
-            <article>
-                <img class="frete" src="/img/frete.jpg" alt="frete">
-                <p class="pagamentos"> Frete grátis para todo Brasil</p>
-            </article>
-        </div>
-    </main>
-    <footer>
-        <footer class="geral">
-            <div class="container-main-footer">
-                <div class="container-footer">
-                    <p class="p-footer">Cadastre-se para receber nossa newsletter</p>
-                    <input type="text" name="news" class="input-footer">
-                    <button class="bt-footer">Cadastrar</button>
+                <div class="container-promo">
+                    <article class="icones">
+                        <img class="img-pagamentos" src="/img/cartao.png" alt="cartao">
+                        <p class="pagamentos">Pagamento em até 10x sem juros</p>
+                    </article>
+                    <article>
+                        <img class="img-pagamentos" src="/img/boleto.png" alt="boleto">
+                        <p class="pagamentos">Pagamento por boleto</p>
+                    </article>
+                    <article>
+                        <img class="img-pagamentos" src="/img/pix.jpg" alt="pix">
+                        <p class="pagamentos">Pagamento via pix</p>
+                    </article>
+                    <article>
+                        <img class="frete" src="/img/frete.jpg" alt="frete">
+                        <p class="pagamentos"> Frete grátis para todo Brasil</p>
+                    </article>
                 </div>
-                <div>
-                    <p class="titulo">Categorias</p>
-                    <p class="itens">Masculino</p>
-                    <p class="itens">Feminino</p>
-                    <p class="itens">Infantil</p>
-                    <p class="itens">Esportes</p>
-                    <p class="itens">Acessórios</p>
-                </div>
-                <div>
-                    <p class="titulo">Ajuda</p>
-                    <p class="itens">Central de ajuda</p>
-                    <p class="itens">Status da compra</p>
-                    <p class="itens">Devoluções e garantias</p>
-                    <p class="itens">Nosso contato</p>
-                </div>
-                <div>
-                    <p class="titulo">Sobre nós</p>
-                    <p class="itens">Trabalhe conosco</p>
-                    <p class="itens">Tecnologia e inovação</p>
-                    <p class="itens">Conheça nossa hitória</p>
-                </div>
-            </div>
-        </footer>
-</body>
+            </main>
+            <%- include('parts/footer.ejs') %>
+    </body>
 
 </html>

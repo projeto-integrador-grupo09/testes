@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<%- include('parts/head.ejs') %>
+
+
+  <body>
+    <link rel="stylesheet" href="/css/login.css">
+    <%- include('parts/header.ejs') %>
+
+      <div class="main-login">
+        <div class="left-login">
+          <h1>Faça login<br>Adquira nossos produtos </h1>
+          <img src="/img/soccer-animate.svg" class="left-login-image" alt="soccer">
+        </div>
+        <div class="right-login">
+          <div class="card-login">
+            <h1>Login</h1>
+            <div class="textfield">
+              <label for="usuario">Usuário</label>
+              <input type="text" name="usuario" placeholder="Usuário">
+            </div>
+            <div class="textfield">
+              <label for="senha">Senha</label>
+              <input type="password" name="senha" placeholder="senha">
+            </div>
+            <button class="btn-login">Login</button>
+          </div>
+        </div>
+
+      </div>
+      <footer class="footer2">
+        <button class="botao-carregar">Carregar mais produtos</button>
+      </footer>
+      </main>
+  <%- include('parts/footer.ejs') %>
+  </body>
+</html>

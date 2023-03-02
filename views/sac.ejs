@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<%- include('parts/head.ejs') %>
+
+    <body>
+        <link rel="stylesheet" href="/css/sac.css">
+        <%- include('parts/header.ejs') %>
+            <main>
+                <p class="texto">Fale conosco</p>
+                <div class="container-sac">
+                    <form id="contact" action="" method="POST">
+                        <div class="div-sac">
+                            <h3>Central de Atendimento DH Sports</h3>
+                            <label for="nome">Nome:</label>
+                            <input id="nome" placeholder="Nome completo" type="text" required>
+                        </div>
+                        <div>
+                            <label for="email">E-mail:</label>
+                            <input id="email" placeholder="E-mail" type="email" required>
+                        </div>
+                        <div>
+                            <label for="tel">Telefone:</label>
+                            <input id="tel" placeholder="Telefone" (Opcional) type="tel" required pattern="^[0-9]{11}$">
+                        </div>
+                        <div>
+                            <label for="site">Site:</label>
+                            <input id="site" placeholder="Site" (Opcional) type="url">
+                        </div>
+                        <div>
+                            <label for="box-msg">Digite aqui sua mensagem:</label>
+                            <textarea id="box-msg" placeholder="Máximo 500 caracteres" type="email" tabindex="5"
+                                required></textarea>
+                        </div>
+                        <div>
+                            <button name="submit" type="submit" id="contact-submit"
+                                data-submit="...sending">Enviar</button>
+                        </div>
+                        <div>
+                            <p class="copyright"> Todos os direitos reservados @
+                                <a href="https://www.dhsports.com.br" target="_blank" title="DH Sports">DH Sports</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </main>
+            <%- include('parts/footer.ejs') %>
+    </body>
+</html>
