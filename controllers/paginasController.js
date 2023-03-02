@@ -1,4 +1,5 @@
 const path = require('path');
+const produtos = require('../databases/camisas.json')
 const paginasController = {
 
     showhome: (req, res)=>{
@@ -7,8 +8,7 @@ const paginasController = {
     },
 
     showProdutos: (req, res)=>{
-        //let id = req.params.idProduto
-        return res.sendFile(path.resolve('views/produtos.html'))
+        return res.render("produtos.ejs",{produtos})
     },
 
     showCarrinho: (req, res)=>{

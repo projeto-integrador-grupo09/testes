@@ -9,7 +9,7 @@
         "preco": 350,
         "img": "/img/espanha.jpg",
         "destaque": true,
-        "score":1
+        "score": 1
     },
     {
         "id": 2,
@@ -21,7 +21,7 @@
         "preco": 350,
         "img": "/img/argentina.webp",
         "destaque": true,
-        "score":1
+        "score": 1
     },
     {
         "id": 3,
@@ -33,7 +33,7 @@
         "preco": 350,
         "img": "/img/alemanha copy.webp",
         "destaque": true,
-        "score":1
+        "score": 1
     },
     {
         "id": 4,
@@ -45,7 +45,7 @@
         "preco": 350,
         "img": "/img/brasil copy.jpg",
         "destaque": true,
-        "score":30
+        "score": 30
     },
     {
         "id": 5,
@@ -57,7 +57,7 @@
         "preco": 350,
         "img": "/img/Inglaterra copy.jpg",
         "destaque": true,
-        "score":30
+        "score": 30
     },
     {
         "id": 6,
@@ -69,7 +69,7 @@
         "preco": 350,
         "img": "/img/uruguai copy.webp",
         "destaque": true,
-        "score":1
+        "score": 1
     },
     {
         "id": 7,
@@ -81,8 +81,18 @@
         "preco": 350,
         "img": "/img/japao copy.jpg",
         "destaque": true,
-        "score":1
+        "score": 1
+    },
+    {
+        "id": 8,
+        "nome": "usbu",
+        "Cores": [
+            "branco",
+            "Azul"
+        ],
+        "preco": 350,
+        "img": "/img/japao copy.jpg",
+        "destaque": true,
+        "score": 1
     }
-    
-    
 ]
