@@ -1,5 +1,5 @@
 const path = require('path');
-const produtos = require('../databases/camisas.json')
+const produtos = require('../databases/camisas.json');
 const paginasController = {
 
     showhome: (req, res)=>{
@@ -38,6 +38,19 @@ const paginasController = {
     showSac: (req, res)=>{
         return res.render('sac.ejs');
     },
+
+    showDetalhe: (req, res)=>{
+        let id = req.params.idDetalhe;
+
+        //Importar o array camisas
+        const camisas = require('../databases/camisas.json');
+
+        //localizar a camisa de idprocurado
+        const camisa = camisas.find(c => c.id == id);
+
+        //mandar a página detalhe ser exibido
+        return res.render('detalhe.ejs', {camisa});
+    }
   
 };
 

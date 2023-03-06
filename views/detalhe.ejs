@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('parts/head.ejs') %>
+
+    <body>
+        <link rel="stylesheet" href="/css/detalhe.css">
+        <%- include('parts/header.ejs') %>
+            <main>
+                <h1>
+                    <%= camisa.nome %>
+                </h1>
+                <h2>
+                    <%= camisa.preco%>
+                </h2>
+                <img src="<%= camisa.img %>" alt="<%= camisa.nome %>">
+                <div>Detalhes: <%= camisa.detalhe%>
+                </div>
+                <form action="/detalhe" method="post">
+                    <input type="hidden" name="aEscolhida" value="<%= camisa.id %>">
+                    <button>+ Add</button>
+                </form>
+            </main>
+            <%- include('parts/footer.ejs') %>
+    </body>
+
+</html>

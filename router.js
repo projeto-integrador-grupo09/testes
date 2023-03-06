@@ -12,5 +12,7 @@ router.get('/carrinho',paginasController.showCarrinho);
 router.get('/login',paginasController.showLogin);
 router.get('/sac',paginasController.showSac);
 
+router.get('/detalhe/:idDetalhe', paginasController.showDetalhe);
+
 //Exportar o roteador
 module.exports = router;    
