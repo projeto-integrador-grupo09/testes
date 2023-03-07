@@ -1,98 +1,94 @@
 [
     {
         "id": 1,
-        "nome": "Espanha",
+        "nome": "Camisa Espanha",
         "Cores": [
             "Vermelha",
             "Amarela"
         ],
         "preco": 350,
         "img": "/img/espanha.jpg",
+        "detalhe": "Tecido em AEROREADY para remoção de suor, malha dupla 100% poliester reciclado",
         "destaque": true,
         "score": 1
     },
     {
         "id": 2,
-        "nome": "Argentina",
+        "nome": "Camisa Argentina",
         "Cores": [
             "Azul",
             "Branca"
         ],
         "preco": 350,
         "img": "/img/argentina.webp",
+        "detalhe": "Tecido em AEROREADY para remoção de suor, malha dupla 100% poliester reciclado",
         "destaque": true,
         "score": 1
     },
     {
         "id": 3,
-        "nome": "Alemanha",
+        "nome": "Camisa Alemanha",
         "Cores": [
             "Preto",
             "Branca"
         ],
         "preco": 350,
         "img": "/img/alemanha copy.webp",
+        "detalhe": "Tecido em AEROREADY para remoção de suor, malha dupla 100% poliester reciclado",
         "destaque": true,
         "score": 1
     },
     {
         "id": 4,
-        "nome": "Brasil",
+        "nome": "Camisa Brasil",
         "Cores": [
             "Amarelo",
             "Verde"
         ],
         "preco": 350,
         "img": "/img/brasil copy.jpg",
+        "detalhe": "Tecido em AEROREADY para remoção de suor, malha dupla 100% poliester reciclado",
         "destaque": true,
         "score": 30
     },
     {
         "id": 5,
-        "nome": "Inglaterra",
+        "nome": "Camisa Inglaterra",
         "Cores": [
             "branco",
             "Azul"
         ],
         "preco": 350,
         "img": "/img/Inglaterra copy.jpg",
+        "detalhe": "Tecido em AEROREADY para remoção de suor, malha dupla 100% poliester reciclado",
         "destaque": true,
         "score": 30
     },
     {
         "id": 6,
-        "nome": "Uruguai",
+        "nome": "Camisa Uruguai",
         "Cores": [
             "branco",
             "Azul"
         ],
         "preco": 350,
         "img": "/img/uruguai copy.webp",
+        "detalhe": "Tecido em AEROREADY para remoção de suor, malha dupla 100% poliester reciclado",
         "destaque": true,
         "score": 1
     },
     {
         "id": 7,
-        "nome": "Japao",
+        "nome": "Camisa Japao",
         "Cores": [
             "branco",
             "Azul"
         ],
         "preco": 350,
         "img": "/img/japao copy.jpg",
-        "destaque": true,
-        "score": 1
-    },
-    {
-        "id": 8,
-        "nome": "usbu",
-        "Cores": [
-            "branco",
-            "Azul"
-        ],
-        "preco": 350,
-        "img": "/img/japao copy.jpg",
+        "detalhe": "Tecido em AEROREADY para remoção de suor, malha dupla 100% poliester reciclado",
         "destaque": true,
         "score": 1
     }
+  
 ]
