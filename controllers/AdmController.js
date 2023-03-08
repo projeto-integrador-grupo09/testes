@@ -17,20 +17,19 @@ listarProdutos: (req, res) => {
 
     gravarProduto: (req, res)=> {
         // req.body está carregando as infos digitadas pelo usuario
-        res.send(req.body)
 
-    //     // criar um objeto produto
-    //     let produto = {
-    //         nome: req.body.nome,
-    //         cor: req.body.cor,
-    //         preco: Number(req.body.preco)
-    //     } 
+        // criar um objeto produto
+        let produto = {
+            nome: req.body.nome,
+            cor: req.body.cor,
+            preco: Number(req.body.preco)
+        } 
 
-    //     // Salvar esse objeto no array de produtos
-    //     produtosServices.adicionarCamisas(produto);
+        // Salvar esse objeto no array de produtos
+        produtosServices.adicionarCamisas(produto);
 
-    //     //Redirecionar o usuario para a lista de produtos
-    //     res.redirect('/adm/produtos')
+        //Redirecionar o usuario para a lista de produtos
+        res.redirect('/adm/produtos')
      }
 }
 
