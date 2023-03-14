@@ -62,8 +62,8 @@ function removerCamisas(idDetalhe){
  * @param {number} idDetalhe
  * @param {{nome: string, detalhes:string[], preco:number, destaque: boolean}} dadosDaPizza 
  */
-function alterarCamisa(idDetalhe, dadosDaCamisa){
-    let camisa = camisas.find(p => p.id == idDetalhe);
+function alterarCamisa(id, dadosDaCamisa){
+    let camisa = camisas.find(p => p.id == id);
     if(camisa == undefined){
         throw new Error("Camisa inexistente");
     }

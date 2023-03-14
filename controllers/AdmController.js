@@ -1,4 +1,5 @@
 const produtosServices = require('../services/produtosServices');
+const camisas = require('../databases/camisas.json');
 
 const AdmController = {
 listarProdutos: (req, res) => {
@@ -51,11 +52,33 @@ listarProdutos: (req, res) => {
 
     },
 
-    alterarProduto: (req, res)=>{
-        produtosServices.alterarCamisa;
-
+    alterarProduto: function alterarCamisa(id, dadosDaCamisa){
+        let camisa = camisas.find(p => p.id == id);
+        if(camisa == undefined){
+            throw new Error('Camisa inexistente');
+        }
+    
+        camisa.nome = dadosDaCamisa.nome;
+        camisa.cor = dadosDaCamisa.cor;
+        camisa.detalhe = dadosDaCamisa.detalhe;
+        camisa.preco = dadosDaCamisa.preco;
+    
+        salvar();
+    
+        // (req, res)=>{
+        //     let id = req.params.id;
+    
+        //     produtosServices.alterarCamisa(id, dadosDaCamisa);
+    
+        // }
     }
-}
+    }
+    
+    
+    
+    
+    
+    
 
 
 
