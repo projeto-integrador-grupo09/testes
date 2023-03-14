@@ -35,7 +35,26 @@ listarProdutos: (req, res) => {
 
         //Redirecionar o usuario para a lista de produtos
         res.redirect('/adm/produtos')
-     }
+     },
+    editarProduto: (req, res)=> {
+        // Capiturar o ID do produto
+        let id = req.params.id;
+
+        const camisas = require('../databases/camisas.json');
+
+        // Encontrar o produto a ser editado guardando na variavel produto
+        const produto = camisas.find(p => p.id == id);
+
+        // Renderizar a view form-edit-produtos.ejs
+        //passando para essa view
+        res.render('form-edit-produtos.ejs', {produto});
+
+    },
+
+    alterarProduto: (req, res)=>{
+        produtosServices.alterarCamisa;
+
+    }
 }
 
 

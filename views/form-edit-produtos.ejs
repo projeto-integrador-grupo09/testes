@@ -74,20 +74,25 @@
         </ul>
     </nav>
     <main>
-        <form action="/adm/pizzas/store" method="post">
+        <form action="/adm/produtos/<%= produto.id %>/update" method="post">
             <label>
                 Nome:
-                <input value="<%= pizza.nome %>" type="text" name="nome" id="nome" placeholder="Digite o nome da pizza">
+                <input value="<%= produto.nome %>" type="text" name="nome" id="nome" placeholder="Digite o nome do produto">
             </label>
     
             <label>
-                Ingredientes:
-                <input type="text" name="ingredientes" id="ingredientes" placeholder="Ingredientes (separados por vírgula)">
+                cor:
+                <input value="<%= produto.cor %>" type="text" name="cor" id="cor" placeholder="digite a cor do produto">
+            </label>
+
+            <label>
+                Detalhe:
+                <input value="<%= produto.detalhe %>" type="text" name="detalhe" id="detalhe" placeholder="digite o detahle do produto">
             </label>
     
             <label>
                 Preço:
-                <input type="number" name="preco" id="preco" step="0.01" placeholder="Digite o preço da pizza">
+                <input value="<%= produto.preco %>" type="number" name="preco" id="preco" step="0.01" placeholder="Digite o preço do produto">
             </label>
     
             <label>
@@ -97,7 +102,7 @@
                 <input type="file" name="img" id="img">
             </label>
     
-            <button type="submit">Salvar</button>
+            <button type="submit">Editar</button>
         </form>
     </main>
 </body>

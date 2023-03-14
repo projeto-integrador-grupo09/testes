@@ -62,16 +62,16 @@ function removerCamisas(idDetalhe){
  * @param {number} idDetalhe
  * @param {{nome: string, detalhes:string[], preco:number, destaque: boolean}} dadosDaPizza 
  */
-function alterarCamisas(idDetalhe, dadosDaPizza){
+function alterarCamisa(idDetalhe, dadosDaCamisa){
     let camisa = camisas.find(p => p.id == idDetalhe);
     if(camisa == undefined){
         throw new Error("Camisa inexistente");
     }
 
     camisa.nome = dadosDaCamisa.nome;
-    camisa.ingredientes = dadosDaCamisa.detalhes;
+    camisa.cor = dadosDaCamisa.cor;
+    camisa.detalhe = dadosDaCamisa.detalhe;
     camisa.preco = dadosDaCamisa.preco;
-    camisa.destaque = dadosDaCamisa.destaque;
 
     salvar();
 
@@ -87,6 +87,6 @@ const ProdutosServices = {
     carregarCamisa,
     adicionarCamisas,
     removerCamisas,
-    alterarCamisas
+    alterarCamisa
 }
 module.exports = ProdutosServices;
