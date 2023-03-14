@@ -87,6 +87,7 @@ const ProdutosServices = {
     carregarCamisa,
     adicionarCamisas,
     removerCamisas,
-    alterarCamisa
+    alterarCamisa,
+    salvar
 }
 module.exports = ProdutosServices;

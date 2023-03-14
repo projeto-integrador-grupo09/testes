@@ -52,26 +52,32 @@ listarProdutos: (req, res) => {
 
     },
 
-    alterarProduto: function alterarCamisa(id, dadosDaCamisa){
+    alterarProduto: (req, res)=> {
+        const id = req.params.id
         let camisa = camisas.find(p => p.id == id);
         if(camisa == undefined){
             throw new Error('Camisa inexistente');
         }
     
-        camisa.nome = dadosDaCamisa.nome;
-        camisa.cor = dadosDaCamisa.cor;
-        camisa.detalhe = dadosDaCamisa.detalhe;
-        camisa.preco = dadosDaCamisa.preco;
+        camisa.nome = req.body.nome;
+        camisa.cor = req.body.cor;
+        camisa.detalhe = req.body.detalhe;
+        camisa.preco = Number(req.body.preco);
     
-        salvar();
+        produtosServices.salvar();
+
+        return res.redirect('/adm/produtos');
     
-        // (req, res)=>{
-        //     let id = req.params.id;
-    
-        //     produtosServices.alterarCamisa(id, dadosDaCamisa);
-    
-        // }
+    },
+
+    removerProduto: (req, res)=> {
+        const id = req.params.id
+
+        produtosServices.removerCamisas(id);
+
+        return res.redirect('/adm/produtos');
     }
+
     }
     
     

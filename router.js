@@ -19,7 +19,7 @@ router.get('/adm/produtos/create', AdmController.criarProduto); // Mostra form p
 router.post('/adm/produtos/store', AdmController.gravarProduto); // Recebe info digitadas para criação de um produto
 router.get('/adm/produtos/:id/edit', AdmController.editarProduto); // Mostrar form para editar um produto
 router.post('/adm/produtos/:id/update', AdmController.alterarProduto), // Recebe info digitadas para edição de um produto
-router.post('/adm/produtos/delete', (req, res)=>{}), // Receber o id do produto a ser removido
+router.get('/adm/produtos/:id/delete', AdmController.removerProduto), // Receber o id do produto a ser removido
 
 //Exportar o roteador
 module.exports = router;    

@@ -1,25 +1,9 @@
 [
     {
-        "id": 1,
-        "nome": "Camisa Espanha",
-        "cor": [
-            "Vermelha",
-            "Amarela"
-        ],
-        "preco": 350,
-        "img": "/img/espanha.jpg",
-        "detalhe": "Tecido em AEROREADY para remoção de suor, malha dupla 100% poliester reciclado",
-        "destaque": true,
-        "score": 1
-    },
-    {
         "id": 2,
         "nome": "Camisa Argentina",
-        "cor": [
-            "Azul",
-            "Branca"
-        ],
-        "preco": 350,
+        "cor": "Azul,Branca",
+        "preco": 359,
         "img": "/img/argentina.webp",
         "detalhe": "Tecido em AEROREADY para remoção de suor, malha dupla 100% poliester reciclado",
         "destaque": true,
@@ -41,10 +25,7 @@
     {
         "id": 4,
         "nome": "Camisa Brasil",
-        "cor": [
-            "Amarelo",
-            "Verde"
-        ],
+        "cor": "Amarelo,Verde",
         "preco": 350,
         "img": "/img/brasil copy.jpg",
         "detalhe": "Tecido em AEROREADY para remoção de suor, malha dupla 100% poliester reciclado",
@@ -104,5 +85,4 @@
         "score": 0,
         "id": 8
     }
-    
 ]

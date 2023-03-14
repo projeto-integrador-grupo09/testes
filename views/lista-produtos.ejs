@@ -114,11 +114,11 @@
                         <td>
                             <%= p.nome %>
                         </td>
-                        <td>R$ <%= p.preco %>
+                        <td><%= p.preco.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) %>
                         </td>
                         <td>
                             <a class="bt" href="/adm/produtos/<%= p.id %>/edit">Editar</a>
-                            <a class="bt" href="#">Remover</a>
+                            <a class="bt" href="/adm/produtos/<%= p.id %>/delete">Remover</a>
                         </td>
                     </tr>
                     <% } %>
