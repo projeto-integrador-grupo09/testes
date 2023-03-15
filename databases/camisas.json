@@ -80,5 +80,18 @@
         "detalhe": "Tecido em AEROREADY para remoção de suor, malha dupla 100% poliester reciclado",
         "destaque": true,
         "score": 1
+    },
+    {
+        "nome": "Camisa Irã",
+        "cor": [
+            "Verde",
+            "branca"
+        ],
+        "preco": 350,
+        "img": "/img/1678883330001-camisa_ira.webp",
+        "detalhe": "Tecido em AEROREADY para remoção de suor, malha dupla 100% poliester reciclado",
+        "destaque": false,
+        "score": 0,
+        "id": 8
     }
 ]

@@ -1,5 +1,6 @@
 const produtosServices = require('../services/produtosServices');
 const camisas = require('../databases/camisas.json');
+const fs = require('fs');
 
 const AdmController = {
 listarProdutos: (req, res) => {
@@ -17,14 +18,16 @@ listarProdutos: (req, res) => {
     },
 
     gravarProduto: (req, res)=> {
-        // req.body está carregando as infos digitadas pelo usuario
+        // Renomear o arquivo concatenando a data com o nome original do arquivo
+        let novoNome = `${Date.now()}-${req.file.originalname}`;
+        fs.renameSync(req.file.path,`public/img/${novoNome}`);
 
         // criar um objeto produto
         let produto = {
             nome: req.body.nome,
             cor: req.body.cor.split(',').map(e => e.trim()), // Transforma uma string em um arrai sem espaços
             preco: Number(req.body.preco),
-            img: req.body.img,
+            img: `/img/${novoNome}`, 
             detalhe: "Tecido em AEROREADY para remoção de suor, malha dupla 100% poliester reciclado",
             destaque: false,
             score: 0
