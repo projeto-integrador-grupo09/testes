@@ -24,7 +24,7 @@ listarProdutos: (req, res) => {
             nome: req.body.nome,
             cor: req.body.cor.split(',').map(e => e.trim()), // Transforma uma string em um arrai sem espaços
             preco: Number(req.body.preco),
-            img: "/img/no-image.png",
+            img: req.body.img,
             detalhe: "Tecido em AEROREADY para remoção de suor, malha dupla 100% poliester reciclado",
             destaque: false,
             score: 0
