@@ -27,6 +27,7 @@ router.get('/',paginasController.showhome);
 router.get('/produtos', paginasController.showProdutos);
 router.get('/carrinho',paginasController.showCarrinho);
 router.get('/login',paginasController.showLogin);
+router.get('/perfil',paginasController.showPerfil);
 router.get('/sac',paginasController.showSac);
 router.get('/detalhe/:idDetalhe', paginasController.showDetalhe);
 
