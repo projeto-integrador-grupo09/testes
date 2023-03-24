@@ -4,6 +4,7 @@ const fs = require('fs');
 const bcrypt = require('bcrypt');
 const admin = require('../databases/admin.json');
 const path = require('path');
+const administradores = require('../databases/administradores.json')
 
 const AdmController = {
     listarProdutos: (req, res) => {
@@ -116,14 +117,41 @@ const AdmController = {
             
          res.redirect('/adm/usuarios');
 
+    },
+
+    mostrarLogin: (req, res) => {
+        res.render('login-adm.ejs');
+    },
+
+    login: (req, res) => {
+        // Capturar o email e a senha digitadas pelo usuário
+        const {email, senha} = req.body
+
+      
+       // Verificar a existencia do administrador
+      let adm = administradores.find(adm => adm.email === email);
+      if(adm === undefined){
+        return res.send("Falha no login");
+      }
+      // Verificar a senha do administrador
+      let senhaCrypt = bcrypt.compareSync(senha, adm.senha);
+      if(!senhaCrypt){
+        return res.send("Falha na senha");
+      }
+      res.send("Login Ok")
+      
+      
+      // Criar a session/cookie do adm  
+      
+      
+      // Redireciona-lo para /adm/produtos
+      
+      
     }
-
-
-
-    
 }
 
 
+    
 
 
 
@@ -131,4 +159,7 @@ const AdmController = {
 
 
 
-module.exports = AdmController
+
+
+
+ module.exports = AdmController

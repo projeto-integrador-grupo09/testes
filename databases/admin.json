@@ -22,5 +22,11 @@
         "nome": "pai",
         "email": "pai@gmail.com",
         "senha": "$2b$10$Zh.k3jCXjqBTwtqViUWzl..envBcvI.1JsiaX4aOIA.7e2kziSf3C"
+    },
+    {
+        "id": 5,
+        "nome": "Estela",
+        "email": "estela@dhsports.com",
+        "senha": "$2b$10$9/GKJiFMgX95HUmY.1sa6eMlG.onuuglf61bspvnyTU5Hm8Dr7NYe"
     }
 ]

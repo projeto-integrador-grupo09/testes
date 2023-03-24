@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<%- include('parts/head.ejs') %>
+
+
+    <body>
+        <link rel="stylesheet" href="/css/login.css">
+        <%- include('parts/header.ejs') %>
+            <form action="/adm/login" method="post">
+                <div class="main-login">
+                    <div class="left-login">
+                        <h1>Área administrativa<br>DH SPORTS </h1>
+                        <img src="/img/soccer-animate.svg" class="left-login-image" alt="soccer">
+                    </div>
+                    <div class="right-login">
+                        <div class="card-login">
+                            <h1>Área administrativa</h1>
+                            <div class="textfield">
+                                <label for="email">E-mail</label>
+                                <input type="email" name="email" placeholder="Digite seu E-mail">
+                            </div>
+                            <div class="textfield">
+                                <label for="senha">Senha</label>
+                                <input type="password" name="senha" placeholder="Digite sua senha">
+                            </div>
+                            <button class="btn-login">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <footer class="footer2">
+            </footer>
+            </main>
+            <%- include('parts/footer.ejs') %>
+    </body>
+
+</html>
