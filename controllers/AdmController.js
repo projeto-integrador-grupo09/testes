@@ -66,10 +66,11 @@ const AdmController = {
         }
 
         camisa.nome = req.body.nome;
-        camisa.cor = req.body.cor;
+        camisa.cor = req.body.cor.split(',').map(e => e.trim());
         camisa.detalhe = req.body.detalhe;
         camisa.preco = Number(req.body.preco);
-
+        
+    
         produtosServices.salvar();
 
         return res.redirect('/adm/produtos');
