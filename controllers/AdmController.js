@@ -1,37 +1,40 @@
 const produtosServices = require('../services/produtosServices');
 const camisas = require('../databases/camisas.json');
 const fs = require('fs');
+const bcrypt = require('bcrypt');
+const admin = require('../databases/admin.json');
+const path = require('path');
 
 const AdmController = {
-listarProdutos: (req, res) => {
-    
+    listarProdutos: (req, res) => {
+
         //carregar produtos
         const camisas = produtosServices.carregarProdutos();
 
         // renderizar view listar pizza, passando o produto para ela
-        res.render('lista-produtos.ejs', {camisas})
+        res.render('lista-produtos.ejs', { camisas })
 
     },
 
-    criarProduto: (req, res)=> {
-       res.render('form-add-produtos.ejs')
+    criarProduto: (req, res) => {
+        res.render('form-add-produtos.ejs')
     },
 
-    gravarProduto: (req, res)=> {
+    gravarProduto: (req, res) => {
         // Renomear o arquivo concatenando a data com o nome original do arquivo
         let novoNome = `${Date.now()}-${req.file.originalname}`;
-        fs.renameSync(req.file.path,`public/img/${novoNome}`);
+        fs.renameSync(req.file.path, `public/img/${novoNome}`);
 
         // criar um objeto produto
         let produto = {
             nome: req.body.nome,
             cor: req.body.cor.split(',').map(e => e.trim()), // Transforma uma string em um arrai sem espaços
             preco: Number(req.body.preco),
-            img: `/img/${novoNome}`, 
+            img: `/img/${novoNome}`,
             detalhe: "Tecido em AEROREADY para remoção de suor, malha dupla 100% poliester reciclado",
             destaque: false,
             score: 0
-        } 
+        }
 
 
         // Salvar esse objeto no array de produtos
@@ -39,8 +42,8 @@ listarProdutos: (req, res) => {
 
         //Redirecionar o usuario para a lista de produtos
         res.redirect('/adm/produtos')
-     },
-    editarProduto: (req, res)=> {
+    },
+    editarProduto: (req, res) => {
         // Capiturar o ID do produto
         let id = req.params.id;
 
@@ -51,43 +54,79 @@ listarProdutos: (req, res) => {
 
         // Renderizar a view form-edit-produtos.ejs
         //passando para essa view
-        res.render('form-edit-produtos.ejs', {produto});
+        res.render('form-edit-produtos.ejs', { produto });
 
     },
 
-    alterarProduto: (req, res)=> {
+    alterarProduto: (req, res) => {
         const id = req.params.id
         let camisa = camisas.find(p => p.id == id);
-        if(camisa == undefined){
+        if (camisa == undefined) {
             throw new Error('Camisa inexistente');
         }
-    
+
         camisa.nome = req.body.nome;
         camisa.cor = req.body.cor;
         camisa.detalhe = req.body.detalhe;
         camisa.preco = Number(req.body.preco);
-    
+
         produtosServices.salvar();
 
         return res.redirect('/adm/produtos');
-    
+
     },
 
-    removerProduto: (req, res)=> {
+    removerProduto: (req, res) => {
         const id = req.params.id
 
         produtosServices.removerCamisas(id);
 
         return res.redirect('/adm/produtos');
-    }
+    },
+    
+    //usuarios
+    listarUsuarios: (req, res) => {
+
+
+        // renderizar view listar usuario, passando o produto para ela
+        res.render('lista-admin.ejs', { admin })
+
+    },
+
+    criarUsuario: (req, res) => {
+        res.render('form-add-admin.ejs')
+    },
+
+    gravarUsuario: (req, res) => {
+        let novoid = 1
+        if(admin.length > 0){
+         novoid = admin.at(-1).id + 1
+        }
+        let senhaCriptografada = bcrypt.hashSync( req.body.senha,10)
+        let usuario = {
+            "id": novoid,
+            "nome": req.body.nome,
+            "email": req.body.email,
+            "senha": senhaCriptografada,
+            }
+   admin.push(usuario);
+   fs.writeFileSync(path.join(__dirname,"..","databases","admin.json"),JSON.stringify(admin,null,4))
+
+            
+         res.redirect('/adm/usuarios');
 
     }
+
+
+
     
-    
-    
-    
-    
-    
+}
+
+
+
+
+
+
 
 
 
