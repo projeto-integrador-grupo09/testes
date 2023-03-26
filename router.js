@@ -4,6 +4,7 @@ const AdmController = require('./controllers/admController');
 const paginasController = require('./controllers/paginasController');
 const multer = require('multer');
 const path = require('path');
+const autenticacaoDeLogin = require('./middleware/autenticacaoDeLogin')
 
 //Criar o roteador
 const router = express.Router();
@@ -32,8 +33,11 @@ router.get('/perfil', paginasController.showPerfil);
 router.get('/sac', paginasController.showSac);
 router.get('/detalhe/:idDetalhe', paginasController.showDetalhe);
 
+router.get('/adm/login', AdmController.mostrarLogin) // Mostra form para login do adm
+router.post('/adm/login', AdmController.login)  // Recebe as informações do form login-adm.ejs
 
 // CRUD produtos
+router.use('/adm', autenticacaoDeLogin); // Libera as telas /adm somente para usuários cadastrados
 router.get('/adm/produtos', AdmController.listarProdutos); // Mostra a lista de produtos cadastrados
 router.get('/adm/produtos/create', AdmController.criarProduto); // Mostra form para add produtos
 router.post('/adm/produtos/store', upload.single('img'), AdmController.gravarProduto); // Recebe info digitadas para criação de um produto
@@ -50,8 +54,6 @@ router.post('/adm/usuarios/store', AdmController.gravarUsuario); // Recebe info 
 router.post('/adm/usuarios/update', ()=>{}), // Recebe info digitadas para edição de um produto
 router.get('/adm/usuarios/:idDoUsuario/delete', ()=>{}), // Receber o id do produto a ser removido
 
-router.get('/adm/login', AdmController.mostrarLogin) // Mostra form para login do adm
-router.post('/adm/login', AdmController.login)  // Recebe as informações do form login-adm.ejs
 
   //Exportar o roteador
   module.exports = router;    

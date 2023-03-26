@@ -70,8 +70,8 @@ const AdmController = {
         camisa.cor = req.body.cor.split(',').map(e => e.trim());
         camisa.detalhe = req.body.detalhe;
         camisa.preco = Number(req.body.preco);
-        
-    
+
+
         produtosServices.salvar();
 
         return res.redirect('/adm/produtos');
@@ -85,7 +85,7 @@ const AdmController = {
 
         return res.redirect('/adm/produtos');
     },
-    
+
     //usuarios
     listarUsuarios: (req, res) => {
 
@@ -101,21 +101,21 @@ const AdmController = {
 
     gravarUsuario: (req, res) => {
         let novoid = 1
-        if(admin.length > 0){
-         novoid = admin.at(-1).id + 1
+        if (admin.length > 0) {
+            novoid = admin.at(-1).id + 1
         }
-        let senhaCriptografada = bcrypt.hashSync( req.body.senha,10)
+        let senhaCriptografada = bcrypt.hashSync(req.body.senha, 10)
         let usuario = {
             "id": novoid,
             "nome": req.body.nome,
             "email": req.body.email,
             "senha": senhaCriptografada,
-            }
-   admin.push(usuario);
-   fs.writeFileSync(path.join(__dirname,"..","databases","admin.json"),JSON.stringify(admin,null,4))
+        }
+        admin.push(usuario);
+        fs.writeFileSync(path.join(__dirname, "..", "databases", "admin.json"), JSON.stringify(admin, null, 4))
 
-            
-         res.redirect('/adm/usuarios');
+
+        res.redirect('/adm/usuarios');
 
     },
 
@@ -125,33 +125,34 @@ const AdmController = {
 
     login: (req, res) => {
         // Capturar o email e a senha digitadas pelo usuário
-        const {email, senha} = req.body
+        const { email, senha } = req.body
 
-      
-       // Verificar a existencia do administrador
-      let adm = administradores.find(adm => adm.email === email);
-      if(adm === undefined){
-        return res.send("Falha no login");
-      }
-      // Verificar a senha do administrador
-      let senhaCrypt = bcrypt.compareSync(senha, adm.senha);
-      if(!senhaCrypt){
-        return res.send("Falha na senha");
-      }
-      res.send("Login Ok")
-      
-      
-      // Criar a session/cookie do adm  
-      
-      
-      // Redireciona-lo para /adm/produtos
-      
-      
+
+        // Verificar a existencia do administrador
+        let adm = administradores.find(adm => adm.email === email);
+        if (adm === undefined) {
+            return res.send("Falha no login");
+        }
+        // Verificar a senha do administrador
+        let senhaCrypt = bcrypt.compareSync(senha, adm.senha);
+        if (!senhaCrypt) {
+            return res.send("Falha na senha");
+        }
+
+
+        // Criar a session/cookie do adm  
+        //  1 - Baixar a biblioteca npm i express-session
+        //  2 - Configura o setup para lidar com sessions no app.js
+        req.session.admLogado = true;
+
+        // Redireciona-lo para /adm/produtos
+        res.redirect('/adm/produtos');
+
+
     }
 }
 
 
-    
 
 
 
@@ -162,4 +163,5 @@ const AdmController = {
 
 
 
- module.exports = AdmController
+
+module.exports = AdmController
