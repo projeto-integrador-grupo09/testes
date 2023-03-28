@@ -37,7 +37,7 @@ router.get('/adm/login', AdmController.mostrarLogin) // Mostra form para login d
 router.post('/adm/login', AdmController.login)  // Recebe as informações do form login-adm.ejs
 
 // CRUD produtos
-router.use('/adm', autenticacaoDeLogin); // Libera as telas /adm somente para usuários cadastrados
+//router.use('/adm', autenticacaoDeLogin); // Libera as telas /adm somente para usuários cadastrados
 router.get('/adm/produtos', AdmController.listarProdutos); // Mostra a lista de produtos cadastrados
 router.get('/adm/produtos/create', AdmController.criarProduto); // Mostra form para add produtos
 router.post('/adm/produtos/store', upload.single('img'), AdmController.gravarProduto); // Recebe info digitadas para criação de um produto
