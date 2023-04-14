@@ -184,7 +184,7 @@ const AdmController = {
     },
 
     mostrarLogin: (req, res) => {
-        res.render('login.ejs');
+        res.render('login-adm.ejs');
     },
 
     login: (req, res) => {
@@ -198,7 +198,7 @@ const AdmController = {
             return res.send("Falha no login");
         }
         // Verificar a senha do cliente
-        let senhaCryptCliente = bcrypt.compareSync(senha, cliente.senha);
+        let senhaCrypt = bcrypt.compareSync(senha, cliente.senha);
         if (!senhaCrypt) {
             return res.send("Falha na senha");
         }
