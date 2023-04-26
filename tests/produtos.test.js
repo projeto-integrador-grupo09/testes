@@ -1,4 +1,4 @@
-const Produtos =require("../databases/models/Produtos")
+const {Produtos} =require("../databases/models")
 
 async function test(){
     const produtos=await Produtos.findAll()
