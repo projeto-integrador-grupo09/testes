@@ -192,13 +192,13 @@ const AdmController = {
         const { email, senha } = req.body
 
 
-        // Verificar a existencia do cliente 
-        let cliente = clientes.find(cliente => cliente.email === email);
-        if (cliente === undefined) {
+        // Verificar a existencia do administrador 
+        let administrador = administradores.find(administrador => administrador.email === email);
+        if (administrador === undefined) {
             return res.send("Falha no login");
         }
-        // Verificar a senha do cliente
-        let senhaCrypt = bcrypt.compareSync(senha, cliente.senha);
+        // Verificar a senha do administrador
+        let senhaCrypt = bcrypt.compareSync(senha, administrador.senha);
         if (!senhaCrypt) {
             return res.send("Falha na senha");
         }
