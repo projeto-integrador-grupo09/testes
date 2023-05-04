@@ -44,7 +44,7 @@ clientes_id INT not null,
 bairro varchar(45) not null,
 logradouro varchar(250) not null,
 numero varchar(6),
-cidade INT NOT NULL,
+cidade varchar(120),
 cep varchar(8),
 FOREIGN KEY (clientes_id) REFERENCES clientes(id) ON DELETE RESTRICT ON UPDATE CASCADE
 );
@@ -67,18 +67,7 @@ FOREIGN KEY (produtos_id) REFERENCES produtos(id) ON DELETE RESTRICT ON UPDATE C
 primary key (pedidos_id, produtos_id)
 );
 
-create table avaliacoes (
-	clientes_id int not null,
-    produtos_id int not null,
-    nota TINYINT not null, 
-    texto TEXT null,
-    createdAt timestamp not null,
-    updatedAt timestamp null,
-    deletedAt timestamp null,
-    primary key (clientes_id, produtos_id),
-    FOREIGN KEY (clientes_id) REFERENCES clientes(id) ON DELETE RESTRICT ON UPDATE CASCADE,
-    FOREIGN KEY (produtos_id) REFERENCES produtos(id) ON DELETE RESTRICT ON UPDATE CASCADE    
-);
+
 
 create table imagens(
 	id int not null primary key auto_increment,
@@ -110,4 +99,5 @@ insert into produtos (id,nome,preco,categorias_id) values
 (6,"Camisa Uruguai",350,1),
 (7,"Camisa Japao",350,1);
 
-
+insert into enderecos (id,clientes_id,bairro,logradouro,numero,cidade,cep) values
+(1,1,"bela vista","rua modesto de paiva","126","belo horizonte","36301026");
