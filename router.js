@@ -1,6 +1,7 @@
 // Importar o Express
 const express = require('express');
 const AdmController = require('./controllers/admController');
+const CarrinhoController = require('./controllers/CarrinhoController');
 const paginasController = require('./controllers/paginasController');
 const multer = require('multer');
 const path = require('path');
@@ -27,7 +28,8 @@ const upload = multer({ storage: multerDiskstorage });
 //Definir as rotas para o roteador
 router.get('/', paginasController.showhome);
 router.get('/produtos', paginasController.showProdutos);
-router.get('/carrinho', paginasController.showCarrinho);
+router.get('/carrinho', CarrinhoController.showCarrinho);
+router.post('/carrinho/add',CarrinhoController.addCarrinho);
 router.get('/login', paginasController.showLogin);
 router.get('/perfil', paginasController.showPerfil);
 router.get('/sac', paginasController.showSac);

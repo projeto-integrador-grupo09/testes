@@ -15,9 +15,12 @@
                 <img src="<%= camisa.img %>" alt="<%= camisa.nome %>">
                 <div>Detalhes: <%= camisa.detalhe%>
                 </div>
-                <form action="/detalhe" method="post">
-                    <input type="hidden" name="aEscolhida" value="<%= camisa.id %>">
-                    <button>+ Add</button>
+                <form action="/carrinho/add" method="post">
+                    <input type="hidden" name="id" value="<%= camisa.id %>">
+                    <input type="hidden" name="nome" value="<%= camisa.nome %>">
+                    <input type="hidden" name="preco" value="<%= camisa.preco %>">
+                    <input type="hidden" name="img" value="<%= camisa.img %>">
+                    <button>+ Add </button>
                 </form>
             </main>
             <%- include('parts/footer.ejs') %>

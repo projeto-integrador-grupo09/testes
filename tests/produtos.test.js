@@ -1,7 +1,9 @@
-const {Produtos} =require("../databases/models")
+const { Produtos } = require("../databases/models");
 
-async function test(){
-    const produtos=await Produtos.findAll()
+async function test() {
+    let produtos = await Produtos.findAll({
+        raw: true,
+    });
     console.log(produtos)
 }
-test()
+test();

@@ -58,6 +58,8 @@ forma_de_pagamento_id INT not null,
 FOREIGN KEY (forma_de_pagamento_id) REFERENCES forma_de_pagamento(id) ON DELETE RESTRICT ON UPDATE CASCADE,
 FOREIGN KEY (clientes_id, enderecos_id) REFERENCES enderecos(clientes_id, id) 
 );
+
+
 create table produtos_x_pedidos (
 pedidos_id INT,
 produtos_id INT,
