@@ -16,7 +16,7 @@ main {
 }
 
 main section {
-    height: 500px;
+    height: 550px;
     padding: 100px;
 }
 
@@ -48,6 +48,7 @@ main #banner {
     margin-right: auto;
     position: relative;
     top: 100px;
+    width: 100%;
 }
 
 div > #banner-text {
@@ -98,10 +99,10 @@ h1 {
   
   .container-carrossel {
     position: relative;
-    padding: 15px;
+    padding: 20px;
     max-width: 640px;
     margin: 0 auto;
-    padding-top: 150px;
+    padding-top: 10px;
   }
   
   .gallery-wrapper {
