@@ -58,8 +58,6 @@ forma_de_pagamento_id INT not null,
 FOREIGN KEY (forma_de_pagamento_id) REFERENCES forma_de_pagamento(id) ON DELETE RESTRICT ON UPDATE CASCADE,
 FOREIGN KEY (clientes_id, enderecos_id) REFERENCES enderecos(clientes_id, id) 
 );
-
-
 create table produtos_x_pedidos (
 pedidos_id INT,
 produtos_id INT,
@@ -91,6 +89,11 @@ insert into categorias (id,nome) values
 (3,"Infantil"),
 (4,"Esportes"),
 (5,"Acessorios");
+insert into forma_de_pagamento (id,nome) values
+(1,"Deposito"),
+(2,"pix"),
+(3,"cartao"),
+(4,"boleto");
 
 insert into produtos (id,nome,preco,categorias_id) values
 (1,"Camisa Espanha",350,1),
@@ -103,3 +106,6 @@ insert into produtos (id,nome,preco,categorias_id) values
 
 insert into enderecos (id,clientes_id,bairro,logradouro,numero,cidade,cep) values
 (1,1,"bela vista","rua modesto de paiva","126","belo horizonte","36301026");
+
+insert into pedidos (id,enderecos_id,clientes_id,forma_de_pagamento_id) values
+(1,1,1,2)
