@@ -1,31 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<%- include('parts/head.ejs') %>
+  <%- include('parts/head.ejs') %>
 
   <body>
-    <link rel="stylesheet" href="/css/carrinho.css">
+    <link rel="stylesheet" href="/css/carrinho.css" />
     <%- include('parts/header.ejs') %>
-      <main id="main-carrinho">
-        <h2>Carrinho</h2>
-      <% if (carrinho.length == 0){ %>
-        <p>Seu carrinho está vazio</p>
-        <% }else{%>
-          <% for (let item of carrinho){ %>
-            <div>
-              <p>
-                <%= item.nome  %>
-              </p>
-              <p>
-                <%= item.preco  %>
-              </p>
-              <p>
-                <%= item.quantidade  %>
-              </p>
-            </div>
-            <% } %>
-          <% } %>
-        </main>
-      <%- include('parts/footer.ejs') %>
+    <main id="main-carrinho">
+      <h2>Carrinho</h2>
+      <% if (carrinho.length==0){ %>
+        <p class="texto-carrinho-vazio">Seu carrinho está vazio</p>
+      <% }else{%>
+        <div id="container-tabela">
+          <table id="tabela-carrinho">
+            <thead>
+              <tr>
+                <td>Imagem</td>
+                <td>Nome</td>
+                <td>Quantidade</td>
+                <td>Preço unitário</td>
+                <td>Preço total</td>
+              </tr>
+            </thead>
+            <tbody>
+              <% for (let item of carrinho){ %>
+              <tr>
+                <td>
+                  <img class="img-carrinho" src="<%= item.img %>" alt="<%= item.nome %>" />
+                </td>
+                <td><%= item.nome %></td>
+                <td><%= item.quantidade %></td>
+                <td><%= parseFloat(item.preco).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) %></td>
+                <td><%= parseFloat(item.total).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) %></td>
+              </tr>
+              <% } %>
+            </tbody>
+          </table>
+          <section id="resumo-carrinho">
+            <h3>Resumo do Pedido</h3>
+                <div>
+                    <h4>Subtotal:</h4>
+                    <p>R$ 199,90</p>
+                </div>
+                <div>
+                    <h4>Frete:</h4>
+                    <p>R$ 12,00</p>
+                </div>
+                <div>
+                    <h4>Total:</h4>
+                    <p>R$ 207,50</p>
+                </div>
+          </section>
+        </div>
+      <% } %>
+    </main>
+    <%- include('parts/footer.ejs') %>
   </body>
 </html>

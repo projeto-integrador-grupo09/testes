@@ -105,7 +105,8 @@ insert into produtos (id,nome,preco,categorias_id) values
 (7,"Camisa Japao",350,1);
 
 insert into enderecos (id,clientes_id,bairro,logradouro,numero,cidade,cep) values
-(1,1,"bela vista","rua modesto de paiva","126","belo horizonte","36301026");
+(1,1,"bela vista","rua modesto de paiva","126","belo horizonte","36301026"),
+(2,2,"jardim acacia","rua das flores","16","sao paulo","63709040");
 
 insert into pedidos (id,enderecos_id,clientes_id,forma_de_pagamento_id) values
 (1,1,1,2)
