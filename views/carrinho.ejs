@@ -6,15 +6,26 @@
   <body>
     <link rel="stylesheet" href="/css/carrinho.css">
     <%- include('parts/header.ejs') %>
-      <h2>Carrinho de <%= nomeDoUsuario %>
-      </h2>
-      <ul>
-        <% for (const camisa of carrinho) { %>
-          <li>
-            <%= camisa.nome %>
-          </li>
+      <main id="main-carrinho">
+        <h2>Carrinho</h2>
+      <% if (carrinho.length == 0){ %>
+        <p>Seu carrinho está vazio</p>
+        <% }else{%>
+          <% for (let item of carrinho){ %>
+            <div>
+              <p>
+                <%= item.nome  %>
+              </p>
+              <p>
+                <%= item.preco  %>
+              </p>
+              <p>
+                <%= item.quantidade  %>
+              </p>
+            </div>
+            <% } %>
           <% } %>
-      </ul>
+        </main>
       <%- include('parts/footer.ejs') %>
   </body>
 </html>

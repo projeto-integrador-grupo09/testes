@@ -1,6 +1,6 @@
 // Importar o Express
 const express = require('express');
-const AdmController = require('./controllers/admController');
+const AdmController = require('./controllers/AdmController');
 const CarrinhoController = require('./controllers/CarrinhoController');
 const paginasController = require('./controllers/paginasController');
 const multer = require('multer');

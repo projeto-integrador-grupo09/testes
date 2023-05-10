@@ -13,7 +13,7 @@
         "id": 2,
         "nome": "Camisa Argentina",
         "cor": "Azul,Branca",
-        "preco": 359,
+        "preco": 350,
         "img": "/img/argentina.webp",
         "detalhe": "Tecido em AEROREADY para remoção de suor, malha dupla 100% poliester reciclado",
         "destaque": true,
@@ -71,7 +71,7 @@
     },
     {
         "id": 7,
-        "nome": "Camisa Japao",
+        "nome": "Camisa Japão",
         "cor": [
             "branco",
             "Azul"

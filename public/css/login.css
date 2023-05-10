@@ -7,6 +7,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     margin: 0;
 }
@@ -113,7 +117,7 @@ color: #f0ffff94;
     }
 }
 
-header {
+/*header {
     background-color:rgb(224, 232, 232);
     padding: 10px 50px;
     display: flex;
@@ -123,7 +127,7 @@ header {
     width: 100%;
     z-index: 1;
     top: 0;
-}
+}*/
 
 footer.geral {
     background-color:rgb(224, 232, 232);
