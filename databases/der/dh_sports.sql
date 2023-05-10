@@ -87,8 +87,8 @@ insert into categorias (id,nome) values
 (1,"Masculino"),
 (2,"feminino"),
 (3,"Infantil"),
-(4,"Esportes"),
-(5,"Acessorios");
+(4,"Esportes"); 
+
 insert into forma_de_pagamento (id,nome) values
 (1,"Deposito"),
 (2,"pix"),

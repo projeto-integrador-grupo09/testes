@@ -94,7 +94,7 @@ margin-bottom: 10px;
 
 }
 .textfield > input::placeholder{
-color: #f0ffff94;
+color: white;
 }
 .btn-login{
     width: 100%;
