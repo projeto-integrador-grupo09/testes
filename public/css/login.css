@@ -3,22 +3,19 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-
-html {
-    height: 100%;
+        
 }
 
 body {
-    margin: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(-45deg, #201b2c);
 }
 
 .main-login {
     width: 100vw;
     height: 100vh;
-    background: #201b2c;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,23 +29,23 @@ body {
     align-items: center;
     flex-direction: column;
 }
-
+/*NOME ÁREA DO CLIENTE*/
 .left-login>h1 {
     font-size: 3vw;
-    color: aliceblue
+    color: black;
 }
 .left-login-image{
     width: 35vw;
 }
 
 .right-login {
-    width: 50vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 50vw; /*Largura da caixa do form*/
+    /*height: 100vh; */
+    display: flex; /*Segura o form onde ele está, abaixo do header*/
+    justify-content: center; /*Segura o form onde ele está, mais a esquerda*/
+    align-items: center; /*Segura a altura do form*/
 }
-
+/*ÁREA DO LOGIN*/
 .card-login {
     width: 60%;
     display: flex;
@@ -66,7 +63,7 @@ body {
     font-weight: 800;
     margin: 0
 }
-
+/*Input usuário e senha*/
 .textfield {
     width: 100%;
     display: flex;
@@ -75,8 +72,8 @@ body {
     justify-content: center;
     margin: 10px 0px;
 }
-
-.textfield>imput {
+/*INPUT USUÁRIO E SENHA*/
+.textfield>input {
     width: 100%;
     border: none;
     border-radius: 10px;
@@ -90,16 +87,18 @@ body {
 }
 .textfield > label {
     color: #f0ffffde;
-margin-bottom: 10px;
+margin-bottom: 20px;
 
 }
 .textfield > input::placeholder{
 color: white;
 }
+/*BOTÃO INICIAR SESSÃO*/
 .btn-login{
     width: 100%;
-    padding: 16px 0px;
-    margin: 25px;
+    text-align: center;
+    height: 40px;
+    margin: 25px; /*Distância do texto para as bordas*/
     border: none;
     border-radius: 8px;
     outline: none;
@@ -110,6 +109,7 @@ color: white;
     background: black;
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px #00ff8052;
+    
 }
 @media only screean and (max-width: 950px){
     .card-login{
@@ -117,188 +117,3 @@ color: white;
     }
 }
 
-/*header {
-    background-color:rgb(224, 232, 232);
-    padding: 10px 50px;
-    display: flex;
-    align-items: center;
-    justify-content:space-around;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-    top: 0;
-}*/
-
-footer.geral {
-    background-color:rgb(224, 232, 232);
-    height: 500px;
-    padding-top: 100px;
-    width: 100%;
-}
-/*arrumando o css*/
-
-/*Posição da lupa*/
-header section {
-    position: relative;
-}
-
-/*Procurar*/
-header section input {
-    position: relative;
-    font-size: 1.5rem;
-    font-weight: lighter;
-    border-radius: 15px;
-    border: none;
-    padding: 10px;
-    width: 300px;
-    height: 25px;
-    box-sizing: content-box;
-}
-
-.lupa{
-    position: absolute;
-    height: 40px;
-    right: 0;
-    border-radius: 25px;
-}
-
-.logo{
-    width: 100px;
-    border-radius: 60px;
-}
-
-.btbuscar{
-    font-size: 1.5rem;
-    font-weight: lighter;
-    border-style: none;
-    padding: 10px;
-    width: 300px;
-    height: 25px;
-    background-color: white;
-}
-
-button{
-    border-style: none;
-    width: 300px;
-    height: 25px;
-    background-color: white;
-
-}
-
-/*Alinhar HOME/PRODUTOS/FALE CONOSCO/ICONES*/
-header >nav >ul{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    
-}
-
-header .link-header{
-    display: flex;
-    text-decoration: none;
-    padding: 0px 10px;
-    color: black;
-    font-weight: lighter;
-    justify-content:end;
-}
-
-.carrinho {
-    object-fit: cover;
-    height: 30px;
-    padding-left: 20px;
-    align-items: baseline;
-}
-
-.login {
-    object-fit: cover;
-    height: 40px;
-}
-
-header .link-header:hover {
-    background-color: bisque;
-    transition: 0.5s;
-}
-
-.block-container #banner-text{
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-.texto-buscar {
-    display: flex;
-    justify-content:center;
-    border: none;
-}
-
-.texto-buscar input{
-    font-size: 1rem;
-    font-weight: bold;
-    border-style: none;
-    padding: 20px;
-    margin-right: 10px;
-    width: 300px;
-    height: 25px;
-}
-
-.texto-buscar .btbuscar{
-    font-size: 1rem;
-    font-weight: lighter;
-    border-style: none;
-    padding: 10px;
-    background-color: green;
-    padding: 10px;
-    margin-bottom: 30px;
-    width: 100px;
-    height: 45px;
-
-}
-
-footer.geral {
-    background-color:rgb(224, 232, 232);
-    height: 500px;
-    padding-top: 100px;
-    width: 100%;
-}
-
-div.container-main-footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px;
-}
-
-.p-footer {
-    font-size: 30px;
-    color: black;
-    padding-bottom: 20px;
-}
-    
-.input-footer {
-     width: 400px;
-    height: 30px;
-}
-
-.bt-footer {
-    width: 180px;
-    height: 30px;
-    background-color: black;
-    color: white;
-}
-
-
-.titulo {
-    color: black;
-    font-size: 1.7rem;
-    padding-bottom: 10px;
-    font-weight: lighter;
-}
-
-.itens {
-    color: black;
-    font-size: 1.2rem;
-    padding-bottom: 15px;
-    font-weight: lighter;
-}
-
-.container-footer {
-    padding-top: 50px;
-}

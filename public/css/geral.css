@@ -87,7 +87,7 @@ header .link-header{
     display: flex;
     text-decoration: none;
     padding: 0px 10px;
-    color: black;
+    color: rgb(6, 6, 6);
     font-weight: lighter;
     justify-content:end;
     font-size: 1.3rem;
