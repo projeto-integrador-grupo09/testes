@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    font-family:'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 #main-carrinho {
@@ -22,34 +22,70 @@ body {
     padding: 50px;
 }
 
-#main-carrinho > h2{
+#main-carrinho>h2 {
     text-align: center;
     margin-bottom: 50px;
 }
 
-.texto-carrinho-vazio{
+.texto-carrinho-vazio {
     text-align: center;
 }
 
-#container-tabela{
+#container-tabela {
     display: flex;
     justify-content: space-between;
 }
 
-#tabela-carrinho{
+#tabela-carrinho {
     width: 70%;
 }
 
-.img-carrinho{
+.img-carrinho {
     width: 80px;
 }
 
-#resumo-carrinho{
+#resumo-carrinho {
     width: 25%;
-    background-color:rgb(224, 232, 232);
+    background-color: rgb(224, 232, 232);
     padding: 20px;
 }
 
-#resumo-carrinho div{
+#resumo-carrinho div {
     margin: 10px 0;
+}
+
+.btn {
+    padding: 10px 8px;
+    width: 120px;
+    color: rgb(8, 8, 8);
+    background: dodgerblue;
+    border: 1px solid #555;
+    border-radius: 5px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    transition: background 1s;
+}
+
+.btn:hover {
+    background: rgb(224, 232, 232);
+}
+
+.botao {
+    right: 300px;
+    padding: 10px 8px;
+    width: 120px;
+    color: rgb(8, 8, 8);
+    background: dodgerblue;
+    border: 1px solid #555;
+    border-radius: 5px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    transition: background 1s;
+    
+}
+
+.botao:hover {
+    background: rgb(224, 232, 232);
 }
