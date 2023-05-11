@@ -37,7 +37,7 @@ main button{
 	display: block;
 	border: none;
 	color: black;
-	background-color: aqua;
+	background-color:rgb(224, 232, 232);
 	padding: 10px 20px;
 	font-size: 1.5rem;
 	cursor: pointer;

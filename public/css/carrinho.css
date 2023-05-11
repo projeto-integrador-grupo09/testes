@@ -15,25 +15,41 @@ body {
     font-family:'Roboto', sans-serif;
 }
 
-header {
-    background-color:rgb(224, 232, 232);
-    padding: 10px 50px;
-    display: flex;
-    align-items: center;
-    justify-content:space-around;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-    top: 0;
-}
-
-footer.geral {
-    background-color:rgb(224, 232, 232);
-    height: 500px;
-    padding-top: 100px;
-    width: 100%;
-}
-
 #main-carrinho {
-    margin-top: 300px;
+    margin: 180px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+#main-carrinho > h2{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.texto-carrinho-vazio{
+    text-align: center;
+}
+
+#container-tabela{
+    display: flex;
+    justify-content: space-between;
+}
+
+#tabela-carrinho{
+    width: 70%;
+}
+
+.img-carrinho{
+    width: 80px;
+}
+
+#resumo-carrinho{
+    width: 25%;
+    background-color:rgb(224, 232, 232);
+    padding: 20px;
+}
+
+#resumo-carrinho div{
+    margin: 10px 0;
 }
