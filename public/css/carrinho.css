@@ -83,9 +83,14 @@ body {
     user-select: none;
     cursor: pointer;
     transition: background 1s;
+    left: 30px;
     
 }
 
 .botao:hover {
     background: rgb(224, 232, 232);
+}
+.btn,.botao{
+    float: left;
+
 }
