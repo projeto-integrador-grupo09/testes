@@ -26,5 +26,17 @@ module.exports = (sequelize, DataTypes) => {
             timestamps: false
         }
     )
+    Pedidos.associate = (models) =>{
+        Pedidos.belongsToMany(
+            models.Produtos,
+            {
+                as: "produtos",
+                through: "produtos_x_pedidos", // tabela ATRAVES da qual a associação acontece
+                foreignKey: "pedido_id", // nome da coluna que é o id do model atual
+                otherKey: "produto_id", // nome da coluna que é o id do model relacionado
+                timestamps: false
+            }
+        )
+        }
     return Pedidos
 }
