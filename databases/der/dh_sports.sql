@@ -59,12 +59,12 @@ FOREIGN KEY (forma_de_pagamento_id) REFERENCES forma_de_pagamento(id) ON DELETE 
 FOREIGN KEY (clientes_id, enderecos_id) REFERENCES enderecos(clientes_id, id) 
 );
 create table produtos_x_pedidos (
-pedidos_id INT NOT NULL,
-produtos_id INT NOT NULL,
+pedidos_id INT,
+produtos_id INT,
 quantidade DECIMAL(5,2) not null,
-PRIMARY KEY (produtos_id, pedidos_id),
-FOREIGN KEY (produtos_id) REFERENCES produtos(id),
-FOREIGN KEY (pedidos_id) REFERENCES pedidos(id) 
+FOREIGN KEY (pedidos_id) REFERENCES pedidos(id) ON DELETE CASCADE ON UPDATE CASCADE,
+FOREIGN KEY (produtos_id) REFERENCES produtos(id) ON DELETE RESTRICT ON UPDATE CASCADE,
+primary key (pedidos_id, produtos_id)
 );
 
 
@@ -111,4 +111,9 @@ insert into enderecos (id,clientes_id,bairro,logradouro,numero,cidade,cep) value
 insert into pedidos (id,enderecos_id,clientes_id,forma_de_pagamento_id) values
 (1,1,1,2);
 insert into produtos_x_pedidos (pedidos_id,produtos_id,quantidade ) values
-(1,2,2);
+(1,2,2); 
+
+insert into administradores (id,nome,email,senha) values
+(1,"Dudu","dudu@dhsports.com",123456),
+(2,"Ligia","ligia@dhsports.com",654321),
+(3,"Sergio","sergio@dhsports,com",123456);
