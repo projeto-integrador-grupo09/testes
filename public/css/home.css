@@ -81,6 +81,7 @@ div>#banner-text {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: static;
 
 }
 
@@ -89,7 +90,7 @@ div>#banner-text {
   width: 130px;
 }*/
 
-.img-pagamentos {
+/*.img-pagamentos {
   text-align: center;
   object-fit: cover;
   width: 100px;
@@ -97,6 +98,63 @@ div>#banner-text {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  left: 50px;
+  
+}*/
+.img-pagamentos-cartao {
+  text-align: center;
+  object-fit: cover;
+  width: 130px;
+  height: auto;
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 100px;
+  ;
+  
+}
+.img-pagamentos-boleto {
+  text-align: center;
+  object-fit: cover;
+  width: 130px;
+  height: auto;
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 50px;
+  
+}
+
+.img-pagamentos-pix {
+  text-align: center;
+  object-fit: cover;
+  width: 120px;
+  height: auto;
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 50px;
+  
+}
+
+.img-pagamentos-frete {
+  text-align: center;
+  object-fit: cover;
+  width: 120px;
+  height: auto;
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 80px;
   
 }
 

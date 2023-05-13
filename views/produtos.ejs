@@ -20,10 +20,6 @@
                         </div>
                         <div class="all">
                             <input type="checkbox" name="check1" class="check1">
-                            <label for="check1">Feminino</label>
-                        </div>
-                        <div class="all">
-                            <input type="checkbox" name="check1" class="check1">
                             <label for="check3">Infantil</label>
                         </div>
                         <div class="all">
@@ -43,10 +39,10 @@
                                 <%=produto.nome %>
                             </h2>
                             <span class="preco">
-                                <%=produto.preco %>
+                                R$ <%=produto.preco %>
                             </span>
                             <a href="/detalhe/<%= produto.id %>">Ver mais</a>
-                            <button>comprar</button>
+                            <button>Comprar</button>
                         </article>
                         <% } %>
 

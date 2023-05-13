@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family= Montserrat: família= Montserrat:ital,wght@0,100;0,800;1,400 &família= Roboto:wght@100;700 & display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400, 700&display=swap');
 
 *{
     margin: 0;
@@ -33,6 +33,10 @@ body {
 .left-login>h1 {
     font-size: 3vw;
     color: black;
+    position: relative;
+    top: 50px;
+    left: 50px;
+
 }
 .left-login-image{
     width: 35vw;
